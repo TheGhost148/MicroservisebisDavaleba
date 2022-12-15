@@ -1,0 +1,33 @@
+server:
+  port: 9001
+
+spring:
+  eureka:
+    client:
+      register-with-eureka: true
+      fetch-registry: true
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+    instance:
+      localhost
+  application:
+    name: PROGRAM-SERVICE
+
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+
+#  management:
+#    endpoints:
+#      web:
+#        exposure:
+#          include: *
+#    endpoint:
+#     health:
+#      show-details: always
+
+#    eureka:
+#      client:
+#        enabled: true
